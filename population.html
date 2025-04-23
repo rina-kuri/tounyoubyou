@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"/>
+    <title>10代のための糖尿病ページトップ</title>
+    <link href="main.css" rel="stylesheet" />
+  </head>
+  <body>
+<h1>＃今日の選択が未来をつくる</h1>
+<h4>10代のための糖尿病予防ガイド</h4>
+
+<nav class="contents">
+    <h2 class="contents-title">contents</h2>
+    <ul>
+        <li><a href="#h2_1">糖尿病って何？</a></li>
+        <ul>
+            <li><a href="#h2_4">簡単に解説</a></li>
+            <li><a href="#h2_5">糖尿病の原因</a></li>
+        </ul>
+        <li><a href="#h2_2">糖尿病を予防するには？</a></li>
+        <ul>
+            <li><a href="#h2_6">未来の自分へ</a></li>
+            <li><a href="#h2_7">10代から意識したい予防のポイント</a></li>
+        </ul>
+        <li><a href="#h2_3">参考文献</a></li>
+    </ul>
+</nav>
+
+<p style="text-align: center;"><span style="font-size: 1.4em;">日本人の5～6人に1人は糖尿病だと知っていますか？</span>
+<br><br>あなたの周りに6人いれば、そのうち1人は糖尿病かもしれません。
+<br>では糖尿病ってどんな病気？どうしてそんなに多いの？
+<br>糖尿病は「大人の病気」って思われがちだけど、実は、今の生活習慣が将来のリスクを決めるのです。</p>
+<h2 id="h2_1">糖尿病って何？</h2>
+<h3 id="h2_4">　■簡単に解説■　</h3>
+<p>&#x1F4A1;私たちの血液中のブドウ糖（血糖）の濃度は、膵臓から分泌される"インスリン"というホルモンによって一定の範囲に保たれています。糖尿病は血液中のブドウ糖（血糖）の濃度が高くなりすぎた状態が長く続く病気です。</p>
+<p style="text-align: center;">身体の中の"インスリン"がうまく働かなくなるor足りなくなる  <br>↓<br>ブドウ糖がエネルギーとして使えず、血液中に溜まり続ける </p>
+<p><span style="font-size: 1.4em;">高血糖を放置したら・・・</span></p>
+<ul>
+<div style="display: flex; justify-content: center;"
+    <ul style="text-align: left; list-style-position: inside; font-size: 1.2em;">
+    <strong>
+    <li>心臓病</li>
+    <li>失明</li>
+    <li>腎不全</li>
+    <li>足の切断</li>
+    </strong> 
+    </ul>
+</div>
+<p style="text-align: right;"><span style="font-size: 1.4em;">になってしまうことも</span></p>
+<p>血糖値が高くなると、喉が渇く・たくさん水を飲む／トイレの回数が増える／体重が減る／疲れやすくなるなどの症状が出ることがありますが、気がつかないうちに進行していることも・・・<br>
+</p>
+<h3 id="h2_5">糖尿病の原因</h3>
+
+<p>では、糖尿病はどんな人がなりやすいのでしょうか？</p>
+<p>
+    <ul>
+        <div style="display: flex; justify-content: center;"
+    <ul style="text-align: left; list-style-position: inside; font-size: 1.2em;">
+    <strong>
+        <li>家族に糖尿病の人がいる</li>
+        <li>運動不足</li>
+        <li>甘いもの・ジュースをよく飲む</li>
+        <li>朝食を抜きがち</li>
+        <li>睡眠不足</li>
+        <li>肥満</li>
+    </strong> 
+    </ul>
+    <br>
+    このように糖尿病には、<strong>食事・運動・睡眠</strong>といった
+    <strong><span style="color: red;">生活習慣</span></strong>が強く関わっています。
+</p>
+
+<h1>BMI計算機</h1>
+<p style="text-align: center;">
+  <label for="height">身長 (cm):</label>
+  <input type="number" id="height" placeholder="例: 160">
+
+  <label for="weight">体重 (kg):</label>
+  <input type="number" id="weight" placeholder="例: 55">
+
+  <button onclick="calculateBMI()">計算する</button>
+
+  <div class="result" id="result"></div>
+</p>
+  <script>
+    function calculateBMI() {
+      const height = parseFloat(document.getElementById('height').value) / 100; // cm → m
+      const weight = parseFloat(document.getElementById('weight').value);
+
+      if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+        document.getElementById('result').textContent = "正しい身長と体重を入力してください。";
+        return;
+      }
+
+      const bmi = weight / (height * height);
+      const bmiRounded = bmi.toFixed(1);
+
+      let category = '';
+      if (bmi < 18.5) {
+        category = '低体重';
+      } else if (bmi < 25) {
+        category = '普通体重';
+      } else if (bmi < 30) {
+        category = '肥満（1度）';
+      } else {
+        category = '肥満（2度以上）';
+      }
+
+      document.getElementById('result').textContent = `あなたのBMIは ${bmiRounded} (${category}) です。`;
+    }
+  </script>
+
+<h2 id="h2_2">糖尿病を予防するには？</h2>
+<h3 id="h2_6">未来の自分へ</h3>
+<figure>
+    <img src="img/1.png"alt="1"/>
+    <img src="img/2.png"alt="2"/>
+    <img src="img/3.png"alt="3"/>
+</figure>
+
+<h3 id="h2_7">10代から意識したい予防のポイント</h3>
+<ul>
+    <div style="display: flex; justify-content: center;"
+<ul style="text-align: left; list-style-position: inside; font-size: 1.2em;">
+<strong>
+    <li>食習慣の改善<br>▶深夜にたくさん食べない、
+        3食きちんと食べる<br>
+    ▶栄養バランスのとれた食事とする（好きなものばかり食べない、動物性脂肪や糖分の摂り過ぎに注意！）<br>▶肥満や痩せすぎを改善し、標準体型を目指そう!</li>
+    <li>適度な運動<br>▶運動習慣を身に付けよう!
+        <br>▶大学生、社会人になって忙しくなっても、ウォーキングなど簡単な運動でも良いから習慣にしよう！
+    1,2駅なら徒歩にできるかも!</li>
+    <li>規則的生活習慣<br>▶夜更かしや寝不足に気を付けよう!</li>
+    <li>定期的な健康診断</li>
+</strong> 
+</ul>
+
+<h2 id="h2_3">参考</h2>
+<ul>
+    <li>厚生労働省.(2024).広報誌「厚生労働」,「「みんなで知ろう！ からだのこと」,<br><a href="https://www.mhlw.go.jp/stf/houdou_kouhou/kouhou_shuppan/magazine/202411_006.html" target="_blank">https://www.mhlw.go.jp/stf/houdou_kouhou/kouhou_shuppan/magazine/202411_006.html.</a>
+</ul>
+
+<style>
+  .sns-share {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .sns-share a {
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  .twitter { background: black; }
+  .line { background: #00C300; }
+  .facebook { background: #1877F2; }
+</style>
+
+<div class="sns-share">
+  <a class="twitter" 
+     href="https://twitter.com/intent/tweet?text=糖尿病予防について学ぼう！%20#今日の選択が未来をつくる&url=https://example.com"
+     target="_blank" rel="noopener noreferrer">Xで共有</a>
+
+  <a class="line"
+     href="https://social-plugins.line.me/lineit/share?url=https://example.com"
+     target="_blank" rel="noopener noreferrer">LINEで共有</a>
+
+  <a class="facebook"
+     href="https://www.facebook.com/sharer/sharer.php?u=https://example.com"
+     target="_blank" rel="noopener noreferrer">Facebookで共有</a>
+</div>
+
+</body>
+</html>
